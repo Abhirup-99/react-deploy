@@ -36,13 +36,10 @@ jobs:
 
       - name: Deploy to github pages
         if: ${{ github.event_name == 'push' }}
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: s0/git-publish-subdir-action@develop
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: build
-          #without preserve it only builds if you have untracked files
-          PRESERVE: true
-          # github user name and email shows up in the logs,
-          # so it would be better to make it silent.
-          SILENT: true
+          env:
+            REPO: self
+            BRANCH: gh-pages
+            FOLDER: build
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
