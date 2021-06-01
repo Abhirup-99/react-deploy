@@ -28,6 +28,9 @@ jobs:
       - name: Run lint CSS
         run: npm run test:sass
 
+      - name: Create env
+        run: rm .env && echo REACT_APP_BASE_URL ="react-deploy/" >> .env
+
       - name: Run build
         run: npm run build
 

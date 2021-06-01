@@ -17,14 +17,18 @@ const Navigation = () => {
   return (
     <header className='flex-wrap-sm'>
       <div className='brand'>
-        <Link to='/'>
+        <Link to={`/${process.env.REACT_APP_BASE_URL}`}>
           <img className='logo' src={Logo} alt='' />
         </Link>
       </div>
       <nav>
-        <NavLink to='/'>Vision</NavLink>
-        <NavLink to='/BrandBook'>Brand assets</NavLink>
-        <NavLink to='/ContributingGuide'>How to contribute</NavLink>
+        <NavLink to={`/${process.env.REACT_APP_BASE_URL}`}>Vision</NavLink>
+        <NavLink to={`/${process.env.REACT_APP_BASE_URL}BrandBook`}>
+          Brand assets
+        </NavLink>
+        <NavLink to={`/${process.env.REACT_APP_BASE_URL}ContributingGuide`}>
+          How to contribute
+        </NavLink>
       </nav>
     </header>
   )

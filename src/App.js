@@ -5,6 +5,8 @@ import ContributingGuide from './pages/ContributingGuide'
 import Vision from './pages/Vision'
 
 function App() {
+  // https://github.com/reach/router/issues/78
+  // basepath doesn't work affect Links
   return (
     <Router primary={false} basepath='/react-deploy/'>
       <Vision path='/' />
