@@ -37,9 +37,8 @@ jobs:
       - name: Deploy to github pages
         if: ${{ github.event_name == 'push' }}
         uses: s0/git-publish-subdir-action@develop
-        with:
-          env:
-            REPO: self
-            BRANCH: gh-pages
-            FOLDER: build
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: build
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
