@@ -31,6 +31,9 @@ jobs:
       - name: Run build
         run: npm run build
 
+      - name: Create 404 page
+        run: cp build/index.html build/404.html
+
       - name: Deploy to github pages
         if: ${{ github.event_name == 'push' }}
         uses: JamesIves/github-pages-deploy-action@3.7.1
