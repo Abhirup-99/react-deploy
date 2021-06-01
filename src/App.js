@@ -6,7 +6,7 @@ import Vision from './pages/Vision'
 
 function App() {
   return (
-    <Router primary={false}>
+    <Router primary={false} basepath='/react-deploy/'>
       <Vision path='/' />
       <BrandBook path='/BrandBook' />
       <ContributingGuide path='/ContributingGuide' />
